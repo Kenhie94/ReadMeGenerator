@@ -2,7 +2,7 @@
 import fs from "fs";
 import inquirer from "inquirer";
 import colors from "colors";
-import data from "./utils/generateMarkdown";
+import generateMarkdown from "./utils/generateMarkdown.js";
 
 const questionColors = colors.magenta;
 
@@ -43,7 +43,7 @@ const questions = [
     type: "list",
     message: `${questionColors("Pick a license for your application:")}`,
     name: "projectLicense",
-    choices: ["Apache License 2.0", "MIT License", "Eclipse Public License 2.0", "GNU Affero General Public License v3.0", "Boost Software License 1.0", "The Unlicense"],
+    choices: ["Apache License 2.0", "MIT License", "Eclipse Public License 2.0"],
   },
   {
     type: "input",
@@ -85,10 +85,10 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.prompt(questions.then((data) => {
-    const readmeContent = generateREADME(data);
+  inquirer.prompt(questions).then((data) => {
+    const readmeContent = generateMarkdown(data);
     writeToFile("README.md", readmeContent)
-  }))
+  })
 }
 
 // Function call to initialize app

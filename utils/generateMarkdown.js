@@ -11,42 +11,44 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
+
 function generateMarkdown(data) {
+  const tableOfContentsLinks = data.projectTableofContent.map((item) => `- [${item}](#${item.toLowerCase().replace(/ /g, "-")})`).join("\n");
   return `
-# ${answers.projectTitle}
+# ${data.projectTitle}
 
 ## Description
-${answers.projectDescription}
+${data.projectDescription}
 
 ## Table of Contents
-${answers.projectTableofContent.join(", ")}
+${tableOfContentsLinks}
 
 ## Installation
-${answers.projectInstallation}
+${data.projectInstallation}
 
 ## Usage
-${answers.projectUsage}
+${data.projectUsage}
 
 ## Credits
-${answers.projectCredit}
+${data.projectCredit}
 
 ## License
-This project is licensed under the ${answers.projectLicense}.
+This project is licensed under the ${data.projectLicense}.
 
 ## Badge
-${answers.projectBadge}
+${data.projectBadge}
 
 ## Contributing
-${answers.projectContribute}
+${data.projectContribute}
 
 ## Tests
-${answers.projectTest}
+${data.projectTest}
 
 ## Questions
 If you have any questions, you can reach me at:
 
-- GitHub: [${answers.projectAccount}](https://github.com/${answers.projectAccount})
-- Email: ${answers.projectEmail}
+- GitHub: [${data.projectAccount}](https://github.com/${data.projectAccount})
+- Email: ${data.projectEmail}
 `;
 }
 
