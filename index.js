@@ -22,7 +22,7 @@ const questions = [
     type: "checkbox",
     message: `${questionColors("Add a table of content:")}`,
     name: "projectTableofContent",
-    choices: ["Installation", "Usage", "Credits", "License"],
+    choices: ["Installation", "Usage", "Credits", "Contributing", "Tests", "License"],
   },
   {
     type: "input",
@@ -43,7 +43,7 @@ const questions = [
     type: "list",
     message: `${questionColors("Pick a license for your application:")}`,
     name: "projectLicense",
-    choices: ["Apache License 2.0", "MIT License", "Eclipse Public License 2.0"],
+    choices: ["Apache License 2.0", "MIT License"],
   },
   {
     type: "input",
@@ -76,19 +76,19 @@ const questions = [
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
     if (err) {
-      console.log(`There was an error writing the file: ${err}`)
+      console.log(`There was an error writing the file: ${err}`);
     } else {
-      console.log(`Success! ${fileName} created.`)
+      console.log(`Success! ${fileName} created.`);
     }
-  })
+  });
 }
 
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then((data) => {
     const readmeContent = generateMarkdown(data);
-    writeToFile("README.md", readmeContent)
-  })
+    writeToFile("README.md", readmeContent);
+  });
 }
 
 // Function call to initialize app
