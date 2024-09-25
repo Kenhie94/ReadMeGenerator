@@ -43,12 +43,7 @@ const questions = [
     type: "list",
     message: `${questionColors("Pick a license for your application:")}`,
     name: "projectLicense",
-    choices: ["Apache License 2.0", "MIT License"],
-  },
-  {
-    type: "input",
-    message: `${questionColors("Add a badge:")}`,
-    name: "projectBadge",
+    choices: ["Apache License 2.0", "MIT License", "GNU GPL v3"],
   },
   {
     type: "input",
@@ -87,7 +82,7 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions).then((data) => {
     const readmeContent = generateMarkdown(data);
-    writeToFile("README.md", readmeContent);
+    writeToFile("./generatedReadMe/README.md", readmeContent);
   });
 }
 

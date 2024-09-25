@@ -1,10 +1,11 @@
+
 # README.md Generator
 
 ## Badge
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
-A program that will generate a README.md file through a series of prompt questions
+A program that will generate a README.md file that you can use for future projects
 
 ## Table of Contents
 - [Installation](#installation)
@@ -13,26 +14,31 @@ A program that will generate a README.md file through a series of prompt questio
 - [License](#license)
 
 ## Installation
-- git clone [repo](https://github.com/Kenhie94/ReadMeGenerator.git)
-- run npm i
-- node index.js
+git clone rep then npm i
 
 ## Usage
-Use this to create a README.md file to use for future projects!
+Follow the prompts to fill out your README
 
 ## Credits
-Kenjy Jap
+No collaborators
+
+## Contributing
+Help improve the program in anyway you can
+
+## Tests
+No need for tests
 
 ## Questions
 If you have any questions, you can reach me at:
 
-- GitHub: [Kenhie94](https://github.com/kenhie94)
+- GitHub: [Kenhie94](https://github.com/Kenhie94)
 - Email: kenhiebusiness@gmail.com
 
 ## License
 This project is licensed under the [MIT License](![License](https://opensource.org/licenses/MIT)).
 
-[MIT License](Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+(Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including
+    without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
